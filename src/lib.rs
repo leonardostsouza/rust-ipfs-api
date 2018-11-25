@@ -43,8 +43,7 @@ impl IpfsApi {
     /// Returns a Reqwest URL for the server
     /// Defaults to HTTP with no paths and no request parts.
     fn get_url(&self) -> Result<reqwest::Url, reqwest::UrlError> {
-        let url_string = format!("http://{}:{}/", self.server, self.port);
+        let url_string = format!("https://{}:{}/", self.server, self.port);
         reqwest::Url::parse(&url_string)
     }
 }
-
